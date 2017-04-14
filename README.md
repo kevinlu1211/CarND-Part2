@@ -1,1 +1,1 @@
-### Udacity Self-Driving Car Nanodegree Part 1 (Deep Learning and Computer Vision)
+### Udacity Self-Driving Car Nanodegree Part 2 (Sensor Fusion)
