@@ -1,0 +1,15 @@
+Undefined symbols for architecture x86_64:
+  "Tools::CalculateRMSE(std::__1::vector<Eigen::Matrix<double, -1, 1, 0, -1, 1>, std::__1::allocator<Eigen::Matrix<double, -1, 1, 0, -1, 1> > > const&, std::__1::vector<Eigen::Matrix<double, -1, 1, 0, -1, 1>, std::__1::allocator<Eigen::Matrix<double, -1, 1, 0, -1, 1> > > const&)", referenced from:
+      _main in main-4bfc67.o
+  "Tools::Tools()", referenced from:
+      _main in main-4bfc67.o
+  "Tools::~Tools()", referenced from:
+      _main in main-4bfc67.o
+  "FusionEKF::ProcessMeasurement(MeasurementPackage const&)", referenced from:
+      _main in main-4bfc67.o
+  "FusionEKF::FusionEKF()", referenced from:
+      _main in main-4bfc67.o
+  "FusionEKF::~FusionEKF()", referenced from:
+      _main in main-4bfc67.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
