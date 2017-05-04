@@ -4,12 +4,12 @@ empty:=
 space:= $(empty) $(empty)
 spaceplus:= $(empty)\ $(empty)
 
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/CMakeLists.txt))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/3.7.1/CMakeCCompiler.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/3.7.1/CMakeCXXCompiler.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/3.7.1/CMakeSystem.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/feature_tests.c))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/feature_tests.cxx))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/3.7.1/CMakeCCompiler.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/3.7.1/CMakeCXXCompiler.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/3.7.1/CMakeSystem.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/feature_tests.c))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/feature_tests.cxx))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/share/cmake-3.7/Modules/CMakeCCompiler.cmake.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/share/cmake-3.7/Modules/CMakeCCompilerABI.c))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/share/cmake-3.7/Modules/CMakeCInformation.cmake))
@@ -94,5 +94,5 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/miniconda3/li
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/share/cmake-3.7/Modules/Platform/Darwin.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/share/cmake-3.7/Modules/Platform/UnixPaths.cmake))
 
-/Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/bin/cmake -H/Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project -B/Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode
+/Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/Users/kevinlu/miniconda3/lib/python3.5/site-packages/cmake/data/CMake.app/Contents/bin/cmake -H/Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project -B/Users/kevinlu/Documents/Learning/Udacity-Self-Driving-CarND/Part\ 2/CarND-Extended-Kalman-Filter-Project/ide_profiles/xcode
