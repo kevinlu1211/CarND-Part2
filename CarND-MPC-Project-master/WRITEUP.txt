@@ -1,0 +1,74 @@
+The model:
+
+States:
+x: x position of vehicle
+y: y position of vehicle
+psi: orientation of vehicle
+v: velocity of vehicle
+
+Actuators:
+delta: steering angle
+a: acceleration
+
+Update equations:
+x = x + v * cos(psi) * dt
+y = y + v * sin(psi) * dt
+v = v + a * dt
+psi = psi - (v/L_f)* delta * dt
+
+Special note: here we do minus instead of plus due to the inputs of the simulator
+
+Model setup:
+
+Cost:
+The components of the cost function were the same as the Udacity quiz and consists of 3 main parts: 
+
+1. The cost with respect to the reference state, this includes the CTE errors, the Epsi errors and the velocity error (how far the current velocity deviates from our set velocity)
+2. The cost with respect to how how much actuators change
+3. The cost with respect to how smooth the actuators are changing
+
+The main thing that I added was a factor that could be multiplied in front of every loss. This closely mimics the PID controller whereby each loss had a weight that specified how much each component of the loss contributes 
+
+
+Tuning hyper parameters:
+(unless specified the factor parameters are at 1)
+
+N is how many steps we take into the future
+dt is how big is the step size
+
+Ideally we would want to have N to be very big and dt to be small so I started with:
+
+N = 250;
+dt = 0.01;
+
+This seemed to be overkill as the car was never able to stay on the road as it seemed to be predicting too far in the future so I changed to:
+
+N = 50;
+dt = 0.01;
+
+It got a bit better but still swerved a lot so I increased dt as a small dt would mean that each step is modelled more closely, and since we only use the first state of the best fit we can kind of think of it as overfitting.
+
+N = 15;
+dt = 0.1;
+
+It is a lot better now and only starts to crash during the big turn near the water. It seemed like the car wasn’t turning enough so I increased the CTE_FACTOR to put more weight on the CTE error
+
+N = 15;
+dt = 0.1;
+CTE_FACTOR = 50;
+
+The car seemed to be a lot more responsive to the turns, although it wobbles a lot more. The problem is that after the car takes the turn near the water it fails to recover and crashes in other side. As I have no idea what the EPSI factor does I increase to 100 to see what happens 
+
+N = 15;
+dt = 0.1;
+CTE_FACTOR = 50
+EPSI_FACTOR = 100;
+
+The car made it across the turn and to the other side! Although it was a very close call. So to put more of a emphasis on keeping the same cost, I increased the EPSI_FACTOR to 200 and see if it makes it better. 
+
+N = 15;
+dt = 0.1;
+CTE_FACTOR = 50
+EPSI_FACTOR = 200;
+
+The car passes! YAY

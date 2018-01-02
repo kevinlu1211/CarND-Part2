@@ -1,0 +1,47 @@
+Meaning of each parameter:
+P: is the amount to steer in proportion to the x-track error, the larger the error, 
+   the faster the turn rate, this is calculated via -P * CTE for the turn rate
+I: is the bias adjustment, turn value is calculated via I * (sum of CTE over time)
+D: is the some constant which is the amount of counter-steer to apply, 
+   turn value is calculated via D * (CTE_t - CTE_{t-1})
+
+
+Process of choosing the final parameters:
+
+I tested the parameters by using the simulator to make the car drive around the track. It took a while to get the intuition as to what the values the hyper-parameters were supposed to be at since a lot of them are confounding. In the end, the main thing that I realized was that the "I" needed to be a really low factor because as time goes on the error will add up especially if the car is swerving a lot
+
+P = 1
+I = 1
+D = 1
+
+The car was swerving too much so I lowered the P rate to 0.1. This is because the higher the P level, the more aggressively it will turn towards the center.
+
+P = 0.1
+I = 1
+D = 1
+
+Car was counter steering too little and as result it still get swerving off the road so I increase D to 4
+
+P = 0.1
+I = 1
+D = 4
+
+Car is fine at the start but starts to swerve more and more after some debugging it seems that the I is contributing too much to the steering so I lower it to 0.01. This makes sense as the longer the time, the more error it will accumulate
+
+P = 0.1
+I = 0.01
+D = 4
+
+The I factor is still contributing too much to the steering and a result it is making the car swerve off the road, so I half the I factor again
+
+P = 0.1
+I = 0.005
+D = 4
+
+Car swerves but it is a bit better than before as I believe I have fixed the I factor, though sometimes the car still swerves wildly. I tired lowering the I factor more though it didn’t really seem to help. So it seems like more counter would make the car stay on the track so change D to 10
+
+P = 0.1
+I = 0.005
+D = 10
+
+It works!
